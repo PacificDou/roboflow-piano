@@ -11,7 +11,7 @@ import os
 import sys
 
 IMG_PATH = 'image.jpg'
-API_KEY = Replace_With_Your_Key
+API_KEY = os.getenv('API_KEY')
 DISTANCE_TO_OBJECT = 1000  # mm
 SOUND_FOLDER = "../sounds" #
 GAZE_DETECTION_URL = "http://127.0.0.1:9001/gaze/gaze_detection"
@@ -121,8 +121,8 @@ def draw_gaze(img, gaze):
         cv2.circle(img, (x, y), thickness, color, radius)
 
     # draw label and score
-    label = "face ({:.2f})".format(face['confidence'])
-    cv2.putText(img, label, (10 + x_min, 10 + 10 + y_min), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
+    label = "yaw {:.2f}  pitch {:.2f}".format(gaze['yaw'] / np.pi * 180, gaze['pitch'] / np.pi * 180)
+    cv2.putText(img, label, (x_min, y_min - 10), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
     return img
 
