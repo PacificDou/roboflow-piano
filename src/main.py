@@ -14,7 +14,7 @@ IMG_PATH = 'image.jpg'
 API_KEY = os.getenv('API_KEY')
 DISTANCE_TO_OBJECT = 1000  # mm
 SOUND_FOLDER = "../sounds" #
-GAZE_DETECTION_URL = "http://127.0.0.1:9001/gaze/gaze_detection"
+GAZE_DETECTION_URL = "http://localhost:9001/gaze/gaze_detection"
 
 
 def load_products():
