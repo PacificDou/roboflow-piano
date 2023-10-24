@@ -138,10 +138,10 @@ dmypy.json
 deps/
 profile/
 *.onnx
-*.jpg
+#*.jpg
 *.pstats
-*.jpeg
-*.png
+#*.jpeg
+#*.png
 *.mp4
 *.roboflow.txt
 dev_tools/
