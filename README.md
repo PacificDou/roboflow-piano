@@ -11,7 +11,7 @@ This project shows how to do object detection using [Roboflow](https://roboflow.
 ## How to run it?
 1. Start [Roboflow Inference](https://github.com/roboflow/inference) docker container  
    ```
-   docker run -p 9001:9001 -d roboflow/roboflow-inference-server-cpu
+   docker run -p 9001:9001 --name inference-server -d roboflow/roboflow-inference-server-cpu
    ```
 2. Download this project to your local and run the following commands
    ```

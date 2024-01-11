@@ -152,3 +152,5 @@ _annotations*
 
 export_api_keys.sh
 cache
+
+.DS_Store
